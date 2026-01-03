@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Servicios</title>
+        <link href="http://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    </head>
+
+    <body>
+    <div class="navbar">
+        <a href="/">Inicio</a>
+        <a href="/services">Servicios</a>
+        <a href="/contact">Contacto</a>
+    </div>
+
+    <div class="container">
+        <h1>Servicios</h1>
+        <ul>
+            {% for service in services %}
+                <li>{{service}}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    </body>
+</html>

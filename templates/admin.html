@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Admin Panel</title>
+        <link href="http://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    </head>
+
+    <body>
+        <h1>Mensajes recibidos</h1>
+
+        {% if mensajes %}
+            <ul>
+                {% for mensaje in mensajes %}
+                    <li>
+                        <strong>Nombre: </strong> {{mensaje.name}} <br>
+                        <strong>Email: </strong> {{mensaje.email}} <br>
+                        <strong>Mensaje: </strong> {{mensaje.message}} <br>
+                    </li>
+                    <hr>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No hay mensajes.</p>
+        {% endif %}
+    </body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Contacto</title>
+        <link href="http://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    </head>
+
+    <body>
+    <div class="navbar">
+        <a href="/">Inicio</a>
+        <a href="/services">Servicios</a>
+        <a href="/contact">Contacto</a>
+    </div>
+
+    <div class="container">
+        <h1>Contacto</h1>
+
+        <form method="post">
+            <input type="text" name="nombre" placeholder="Tu nombre" required>
+
+            <input type="email" name="email" placeholder="Tu email" required>
+
+            <textarea name="mensaje" placeholder="Tu mensaje" rows="4" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+    </body>
+</html>
